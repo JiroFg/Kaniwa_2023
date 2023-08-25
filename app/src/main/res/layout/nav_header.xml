@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="120dp"
     android:background="@color/primary_color"
-    android:gravity="bottom"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"
-    android:padding="14dp">
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo_example"
-        app:tint="@color/white" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kaniwa"
-        android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="60dp"
+            android:src="@drawable/logo_kaniwa" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/kaniwa_withe" />
+    </LinearLayout>
 
 
 </LinearLayout>
