@@ -8,4 +8,6 @@
     <string name="info">Acerca de nosotros</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="icono_kaniwa">Icono Kaniwa</string>
+    <string name="logo_kaniwa">Logo Kaniwa</string>
 </resources>

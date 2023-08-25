@@ -1,32 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="120dp"
     android:background="@color/primary_color"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="14dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:padding="18dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:gravity="bottom">
 
         <ImageView
-            android:layout_width="56dp"
-            android:layout_height="60dp"
-            android:src="@drawable/logo_kaniwa" />
-
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:contentDescription="@string/icono_kaniwa"/>
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/kaniwa_withe" />
-    </LinearLayout>
-
-
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:src="@drawable/kaniwa_withe"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:contentDescription="@string/logo_kaniwa"/>
 </LinearLayout>

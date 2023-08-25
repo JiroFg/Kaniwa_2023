@@ -15,6 +15,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 
 class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback {
 
@@ -41,6 +42,15 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback {
         this.map = map
         enabledLocation()
         setCityLocation()
+    }
+
+    //Metodo para hacer zoom en una coordenada especifica
+    fun setZoom(latLng: LatLng){
+        map.clear()
+        val coordenadas = latLng
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(coordenadas, 17f), 2000,null)
+        val ubicacion = MarkerOptions().position(coordenadas).title("Ubicación buscada")
+        map.addMarker(ubicacion)
     }
 
     private fun setCityLocation(){

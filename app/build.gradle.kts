@@ -51,6 +51,6 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("me.relex:circleindicator:2.1.6")
     implementation ("androidx.core:core-splashscreen:1.0.1")
-    implementation ("androidx.constraintlayout:constraintlayout:2.2.0-alpha12")
+    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
 
 }
