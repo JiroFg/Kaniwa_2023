@@ -3,8 +3,6 @@ package com.example.kaniwa_2023
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.kaniwa_2023.databinding.ActivityMainBinding
-import com.google.android.material.tabs.TabLayoutMediator
-import me.relex.circleindicator.CircleIndicator
 
 class MainActivity : AppCompatActivity() {
 
