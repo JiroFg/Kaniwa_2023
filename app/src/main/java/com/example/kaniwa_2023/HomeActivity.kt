@@ -1,16 +1,23 @@
 package com.example.kaniwa_2023
 
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.MenuItem
+import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.cardview.widget.CardView
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.kaniwa_2023.databinding.ActivityHomeBinding
 import com.google.android.gms.common.api.Status
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.model.Place
@@ -75,11 +82,32 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         autocompleteFragment.setOnPlaceSelectedListener(object: PlaceSelectionListener{
             override fun onPlaceSelected(place: Place){
                 buscarUbi(place.latLng!!)
+                putMarkerOnMap(place.latLng!!, "Parada")
             }
             override fun onError(status: Status) {
                 Log.e("ERROR","No se selecciono destino")
             }
         })
+    }
+
+    private fun putMarkerOnMap(latLng: LatLng, title: String){
+        val markerView = (getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater).inflate(R.layout.marker_layout, null)
+        val text = markerView.findViewById<TextView>(R.id.tv_bus)
+        val cardView = markerView.findViewById<CardView>(R.id.cv_marker)
+
+        text.text = title
+        val bitmap = Bitmap.createScaledBitmap(viewToBitmap(cardView), cardView.width, cardView.height, false)
+        val smallMarkerIcon = BitmapDescriptorFactory.fromBitmap(bitmap)
+        mapFrag.addMarker(latLng, smallMarkerIcon)
+    }
+
+    private fun viewToBitmap(view: View): Bitmap{
+        view.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED)
+        val bitmap = Bitmap.createBitmap(view.measuredWidth, view.measuredHeight, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        view.layout(0, 0, view.measuredWidth, view.measuredHeight)
+        view.draw(canvas)
+        return bitmap
     }
 
     private fun buscarUbi(latLng: LatLng){

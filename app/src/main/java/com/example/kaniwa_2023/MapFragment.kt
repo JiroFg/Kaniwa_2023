@@ -14,6 +14,7 @@ import com.example.kaniwa_2023.databinding.FragmentMapBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.model.BitmapDescriptor
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
@@ -101,5 +102,9 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback {
             map.isMyLocationEnabled = false
             Toast.makeText(requireActivity(), "Se requiere permiso para mostrar su ubicación",Toast.LENGTH_SHORT).show()
         }
+    }
+
+    fun addMarker(latLng: LatLng, icon: BitmapDescriptor){
+        map.addMarker(MarkerOptions().position(latLng).icon(icon))
     }
 }
