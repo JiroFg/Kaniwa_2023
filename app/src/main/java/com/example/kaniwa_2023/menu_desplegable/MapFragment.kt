@@ -1,4 +1,4 @@
-package com.example.kaniwa_2023
+package com.example.kaniwa_2023.menu_desplegable
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.kaniwa_2023.R
 import com.example.kaniwa_2023.databinding.FragmentMapBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -77,7 +78,8 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback {
             Toast.makeText(requireActivity(), "Se requiere permiso para mostrar su ubicación",Toast.LENGTH_SHORT).show()
         }else{
             ActivityCompat.requestPermissions(requireActivity(), arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-                REQUEST_CODE_LOCATION)
+                REQUEST_CODE_LOCATION
+            )
         }
     }
 

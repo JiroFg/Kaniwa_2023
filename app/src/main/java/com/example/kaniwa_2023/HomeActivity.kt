@@ -16,6 +16,10 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.kaniwa_2023.databinding.ActivityHomeBinding
+import com.example.kaniwa_2023.menu_desplegable.CostFragment
+import com.example.kaniwa_2023.menu_desplegable.HelpFragment
+import com.example.kaniwa_2023.menu_desplegable.InfoFragment
+import com.example.kaniwa_2023.menu_desplegable.MapFragment
 import com.google.android.gms.common.api.Status
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng

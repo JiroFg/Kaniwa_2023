@@ -1,10 +1,11 @@
-package com.example.kaniwa_2023
+package com.example.kaniwa_2023.menu_desplegable
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.kaniwa_2023.R
 
 class InfoFragment : Fragment() {
 

@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.kaniwa_2023.tutorial.TutorialFragment1
+import com.example.kaniwa_2023.tutorial.TutorialFragment2
+import com.example.kaniwa_2023.tutorial.TutorialFragment3
 
 class ViewPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
 
