@@ -17,9 +17,10 @@
             android:src="@drawable/estudiantes"
             app:layout_constraintBottom_toTopOf="@+id/imageView5"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.8" />
+            app:layout_constraintVertical_bias="0.794" />
 
         <ImageView
             android:id="@+id/imageView5"
@@ -28,9 +29,10 @@
             android:src="@drawable/general"
             app:layout_constraintBottom_toTopOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.92" />
+            app:layout_constraintVertical_bias="0.949" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -39,10 +41,55 @@
             android:src="@drawable/inapam"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.65" />
+            app:layout_constraintVertical_bias="0.664" />
+
+        <TextView
+            android:id="@+id/estudiantesPrecio"
+            android:layout_width="112dp"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="$6.00"
+            android:textColor="#EA8405"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.787"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.64" />
+
+        <TextView
+            android:id="@+id/generalPrecio"
+            android:layout_width="112dp"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="$9.00"
+            android:textColor="#EA8405"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintHorizontal_bias="0.781"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5"
+            app:layout_constraintVertical_bias="0.669" />
+
+        <TextView
+            android:id="@+id/inapamPrecio"
+            android:layout_width="112dp"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="$6.00"
+            android:textColor="#EA8405"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+            app:layout_constraintEnd_toEndOf="@+id/imageView6"
+            app:layout_constraintHorizontal_bias="0.781"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView6"
+            app:layout_constraintVertical_bias="0.699" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
