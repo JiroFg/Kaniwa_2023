@@ -12,6 +12,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.kaniwa_2023.R
 import com.example.kaniwa_2023.databinding.FragmentMapBinding
+import com.example.kaniwa_2023.rutas.Rutas
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -44,6 +45,7 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback {
         this.map = map
         enabledLocation()
         setCityLocation()
+        Rutas.ATAZ(map,requireContext())
     }
 
     //Metodo para hacer zoom en una coordenada especifica
