@@ -45,7 +45,9 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback {
         this.map = map
         enabledLocation()
         setCityLocation()
-        Rutas.ATAZ(map,requireContext())
+
+        //Se pintan rutas temporalmente
+        Rutas.VERDE(map,requireContext())
     }
 
     //Metodo para hacer zoom en una coordenada especifica
