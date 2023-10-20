@@ -53,5 +53,5 @@ dependencies {
     implementation ("androidx.core:core-splashscreen:1.0.1")
     implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation ("androidx.viewpager2:viewpager2:1.0.0")
-
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
 }

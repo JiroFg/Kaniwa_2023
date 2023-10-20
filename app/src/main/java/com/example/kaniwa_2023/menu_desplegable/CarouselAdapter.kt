@@ -10,6 +10,7 @@ import com.example.kaniwa_2023.R
 class CarouselAdapter(private val items: List<CarouselItem>) : RecyclerView.Adapter<CarouselAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        //val imageView = itemView.findViewById<ImageView>(R.id.profile_image)
         val imageView = itemView.findViewById<ImageView>(R.id.imagenC)
         val textView = itemView.findViewById<TextView>(R.id.textoC)
     }
