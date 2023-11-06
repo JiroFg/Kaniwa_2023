@@ -49,6 +49,9 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback {
         //Se pintan rutas temporalmente
         Rutas.VERDE(map,requireContext())
         Rutas.AMARILLO(map, requireContext())
+        Rutas.AMARILLO2(map,requireContext())
+        Rutas.AMARILLO3(map,requireContext())
+        Rutas.AMARILLO4(map,requireContext())
         Rutas.SUX(map,requireContext())
     }
 

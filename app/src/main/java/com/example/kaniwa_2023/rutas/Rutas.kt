@@ -193,6 +193,8 @@ class Rutas (){
             }
         }
 
+
+
         fun AMARILLO(map: GoogleMap, context: Context) {  //Amarillo Bugambilias
             val polylineOptions = PolylineOptions()
                 .add(LatLng(19.51329815833124, -96.87543586506273)).add(LatLng(19.51422361193777, -96.87631036005355))
@@ -246,6 +248,40 @@ class Rutas (){
                 .add(LatLng(19.56231806431515, -96.9274103302974)).add(LatLng(19.562702226555125, -96.92774694752309))
                 .add(LatLng(19.56327926081306, -96.92807031868439)).add(LatLng(19.563564199902583, -96.92819555338235))
                 .add(LatLng(19.563698034755674, -96.92849794936033)).add(LatLng(19.563699473839506, -96.92857125747621))//Fin lazaro cárdenas
+
+
+                       /*.add(LatLng()).add(LatLng())
+                .add(LatLng()).add(LatLng())
+                .add(LatLng()).add(LatLng())
+                .add(LatLng()).add(LatLng())*/
+                .width(15f)
+                .color(ContextCompat.getColor(context, R.color.AMARILLO))
+
+            val polyline = map.addPolyline(polylineOptions)
+            //val pattern = listOf(
+            //    Dot(), Gap(10f), Dash(50f), Gap(10f)
+            //)
+
+            //polyline.pattern = pattern
+
+            polyline.startCap = RoundCap()
+            polyline.endCap = RoundCap()
+            //polyline.endCap = CustomCap(BitmapDescriptorFactory.fromResource(R.drawable.dcp1))
+            polyline.isClickable = true
+            map.setOnPolylineClickListener {
+                Toast.makeText(
+                    context,
+                    "Ruta: Garibalidi",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
+        }
+
+
+        fun AMARILLO2(map: GoogleMap, context: Context) {  //Amarillo Bugambilias
+            val polylineOptions = PolylineOptions()
+                .add(LatLng(19.563698034755674, -96.92849794936033)).add(LatLng(19.563699473839506, -96.92857125747621))//Fin lazaro cárdenas
                 .add(LatLng(19.56366493582384, -96.92864303833966)).add(LatLng(19.56358290800664, -96.92872703723016))
                 .add(LatLng(19.563436970804386, -96.92874749623944)).add(LatLng(19.562857018026396, -96.9287765140359))
                 .add(LatLng(19.562690083338783, -96.92925454405993)).add(LatLng(19.562571442436447, -96.9297007711582))
@@ -295,6 +331,37 @@ class Rutas (){
                 .add(LatLng(19.51850675771651, -96.92042167107695)).add(LatLng(19.518496540185573, -96.92037469561511))
                 .add(LatLng(19.518333059745682, -96.92020124785519)).add(LatLng(19.518217261000725, -96.92007116203526))
                 .add(LatLng(19.51817298498807, -96.91987241981035)).add(LatLng(19.51824110192558, -96.91971703952542))
+                .add(LatLng(19.51825131946374, -96.91974233399041)).add(LatLng(19.518397770772914, -96.91956888623051))
+
+
+
+                .width(15f)
+                .color(ContextCompat.getColor(context, R.color.AMARILLO))
+
+            val polyline = map.addPolyline(polylineOptions)
+            //val pattern = listOf(
+            //    Dot(), Gap(10f), Dash(50f), Gap(10f)
+            //)
+
+            //polyline.pattern = pattern
+
+            polyline.startCap = RoundCap()
+            polyline.endCap = RoundCap()
+            //polyline.endCap = CustomCap(BitmapDescriptorFactory.fromResource(R.drawable.dcp1))
+            polyline.isClickable = true
+            map.setOnPolylineClickListener {
+                Toast.makeText(
+                    context,
+                    "Ruta: Garibalidi",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
+        }
+
+
+        fun AMARILLO3(map: GoogleMap, context: Context) {  //Amarillo Bugambilias
+            val polylineOptions = PolylineOptions()
                 .add(LatLng(19.51825131946374, -96.91974233399041)).add(LatLng(19.518397770772914, -96.91956888623051))
                 .add(LatLng(19.518520426930685, -96.91937789865007)).add(LatLng(19.51860399950093, -96.91923890552283))
                 .add(LatLng(19.518701124324764, -96.91885307977209)).add(LatLng(19.518793731661635, -96.9186182293101))
@@ -346,6 +413,36 @@ class Rutas (){
                 .add(LatLng(19.50636302491231, -96.8984912056136)).add(LatLng(19.506359232519248, -96.89849321727029))
                 .add(LatLng(19.506198277267245, -96.89797762193392)).add(LatLng(19.506084475465133, -96.89761104601166))
                 .add(LatLng(19.505894936265243, -96.89704010384283)).add(LatLng(19.50545237344259, -96.89577189731301))
+                .add(LatLng(19.505248021310642, -96.89498429484863)).add(LatLng(19.505196235551608, -96.89442259732476))
+
+
+
+                .width(15f)
+                .color(ContextCompat.getColor(context, R.color.AMARILLO))
+
+            val polyline = map.addPolyline(polylineOptions)
+            //val pattern = listOf(
+            //    Dot(), Gap(10f), Dash(50f), Gap(10f)
+            //)
+
+            //polyline.pattern = pattern
+
+            polyline.startCap = RoundCap()
+            polyline.endCap = RoundCap()
+            //polyline.endCap = CustomCap(BitmapDescriptorFactory.fromResource(R.drawable.dcp1))
+            polyline.isClickable = true
+            map.setOnPolylineClickListener {
+                Toast.makeText(
+                    context,
+                    "Ruta: Garibalidi",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
+        }
+
+        fun AMARILLO4(map: GoogleMap, context: Context) {  //Amarillo Bugambilias
+            val polylineOptions = PolylineOptions()
                 .add(LatLng(19.505248021310642, -96.89498429484863)).add(LatLng(19.505196235551608, -96.89442259732476))
                 .add(LatLng(19.505187250608788, -96.89374189204014)).add(LatLng(19.505571660179328, -96.89154313608321))//Entrada a las fuentes
                 .add(LatLng(19.50562195956371, -96.89135647362932)).add(LatLng(19.505420576378864, -96.89121267453028))
@@ -413,10 +510,9 @@ class Rutas (){
                 .add(LatLng(19.50849761100835, -96.86862870483135)).add(LatLng(19.508662623767826, -96.8687528000197))
                 .add(LatLng(19.508896667293723, -96.86936223271023)).add(LatLng(19.50986475799613, -96.87122596728996))
                 .add(LatLng(19.510428482031656, -96.87222026612022)).add(LatLng(19.51329815833124, -96.87543586506273))// FIN :D
-                /*.add(LatLng()).add(LatLng())
-                .add(LatLng()).add(LatLng())
-                .add(LatLng()).add(LatLng())
-                .add(LatLng()).add(LatLng())*/
+
+
+
                 .width(15f)
                 .color(ContextCompat.getColor(context, R.color.AMARILLO))
 
@@ -440,6 +536,7 @@ class Rutas (){
             }
 
         }
+
 
         fun VERDE(map: GoogleMap, context: Context){
             val polylineOptions = PolylineOptions()
