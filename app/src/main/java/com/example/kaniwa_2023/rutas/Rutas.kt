@@ -777,7 +777,7 @@ class Rutas (){
             map.addMarker(dFalla)
 
             //BIENESTAR
-            val c3_2 = LatLng(19.522595, -96.894830)
+            val c3_2 = LatLng(19.52287569326267, -96.89480001393063)
             val sBienestar = MarkerOptions().position(c3_2).title("Secretaria Bienestar")
             map.addMarker(sBienestar)
 
@@ -790,6 +790,16 @@ class Rutas (){
             val c5 = LatLng(19.513259188258463, -96.8756648576462)
             val plazaAmericas = MarkerOptions().position(c5).title("Plaza Americas")
             map.addMarker(plazaAmericas)
+
+            //HOtel ONE
+            val c5_2 = LatLng(19.51548568713009, -96.87935919848536)
+            val hotelOne= MarkerOptions().position(c5_2).title("Hotel One")
+            map.addMarker(hotelOne)
+
+            //Nissan en frente del hotel One
+            val c5_3 = LatLng(19.515327065818912, -96.87944861517224)
+            val nissan= MarkerOptions().position(c5_3).title("Hotel One")
+            map.addMarker(nissan)
 
             //Parada frente a plaza americas
             val c6 = LatLng(19.513174, -96.875285)
@@ -810,6 +820,111 @@ class Rutas (){
             val c9 = LatLng(19.531994, -96.905337)
             val pomona = MarkerOptions().position(c9).title("Pomona")
             map.addMarker(pomona)
+
+            //-------------------------20 de Nov.---------------------------\\
+            //Primer parada de 20
+            val nov1 = LatLng(19.52555949100232, -96.8995235931872)
+            val parada1_20Nov = MarkerOptions().position(nov1).title("Frente a Panteón Palo verde")
+            map.addMarker(parada1_20Nov)
+
+            //Oxxo de enfrente
+            val nov2 = LatLng(19.52539264530123, -96.89971120219572)
+            val parada2_20Nov = MarkerOptions().position(nov2).title("OXXO junto a Panteón Palo verde")
+            map.addMarker(parada2_20Nov)
+
+            //Entrada a calle Agua Santa
+            val nov3 = LatLng(19.525338936791332, -96.90143360328892)
+            val parada3_20Nov = MarkerOptions().position(nov3).title("Esquina C.Agua Sanra")
+            map.addMarker(parada3_20Nov)
+
+            //Entrada a calle Lázaro Cardenas (Agua Santa 1)
+            val nov4 = LatLng(19.52532154576675, -96.90248227827304)
+            val parada4_20Nov = MarkerOptions().position(nov4).title("Esquina C. Lázaro Cardenas")
+            map.addMarker(parada4_20Nov)
+
+            //Esq. C. Joaquin Muñoz (Agua Santa 1)
+            val nov5 = LatLng(19.525159114392544, -96.90272015310924)
+            val parada5_20Nov = MarkerOptions().position(nov5).title("Esquina C. Joaquin Muñoz (X-24)")
+            map.addMarker(parada5_20Nov)
+
+            //CAXA
+            val nov6 = LatLng(19.525490185008614, -96.90446803049971)
+            val parada6_20Nov = MarkerOptions().position(nov6).title("Caxa")
+            map.addMarker(parada6_20Nov)
+
+            //Frente CAXA
+            val nov7 = LatLng(19.52532569480411, -96.90449341313415)
+            val parada7_20Nov = MarkerOptions().position(nov7).title("Frente de Caxa")
+            map.addMarker(parada7_20Nov)
+
+            //Verificentro Fast Line
+            val nov8 = LatLng(19.525888749286402, -96.9080900238384)
+            val parada8_20Nov = MarkerOptions().position(nov8).title("Verificentro FastLine")
+            map.addMarker(parada8_20Nov)
+
+            //Innova Tec
+            val nov9 = LatLng(19.52595906921272, -96.90854145151421)
+            val parada9_20Nov = MarkerOptions().position(nov9).title("Innova Tec")
+            map.addMarker(parada9_20Nov)
+
+            //Hotel missión Xalapa
+            val nov10 = LatLng(19.527748142015373, -96.9109969043318)
+            val parada10_20Nov = MarkerOptions().position(nov10).title("Hotel Misión Xalapa")
+            map.addMarker(parada10_20Nov)
+
+            //Plaza 20
+            val nov11 = LatLng(19.527952822632045, -96.9115008324937)
+            val parada11_20Nov = MarkerOptions().position(nov11).title("Plaza 20")
+            map.addMarker(parada11_20Nov)
+
+            //Quinta de Las rosas
+            val nov12 = LatLng(19.53137598737735, -96.91394236923396)
+            val parada12_20Nov = MarkerOptions().position(nov12).title("Quinta de Las Rosas")
+            map.addMarker(parada12_20Nov)
+
+            //Frente al bodegón
+            val nov13 = LatLng(19.53189522727751, -96.9144336890856)
+            val parada13_20Nov = MarkerOptions().position(nov13).title("Bodegón de semillas")
+            map.addMarker(parada13_20Nov)
+
+            //
+            val nov14 = LatLng(19.534733100821974, -96.91664646102255)
+            val parada14_20Nov = MarkerOptions().position(nov14).title("Parada en 20 de Nov xd")
+            map.addMarker(parada14_20Nov)
+
+            //Esquina C. F. Sarabia
+            val nov15 = LatLng(19.535452070014657, -96.91716568337769)
+            val parada15_20Nov = MarkerOptions().position(nov15).title("Esquina Sarabia")
+            map.addMarker(parada15_20Nov)
+
+            //Super che 20 nov
+            val nov16 = LatLng(19.53674467771541, -96.9214623089449)
+            val parada16_20Nov = MarkerOptions().position(nov16).title("Super Che")
+            map.addMarker(parada16_20Nov)
+
+            //Frente a super che
+            val nov17 = LatLng(19.53660705510457, -96.92105664094552)
+            val parada17_20Nov = MarkerOptions().position(nov17).title("Frente al Super Che")
+            map.addMarker(parada17_20Nov)
+
+            //Esquina Rafael Lucio
+            val nov18 = LatLng(19.536971864931708, -96.9229502992518)
+            val parada18_20Nov = MarkerOptions().position(nov18).title("Esquina Rafael Lucio")
+            map.addMarker(parada18_20Nov)
+
+            //Ultima parada de 20 de Nov
+            val nov19 = LatLng(19.539362600545648, -96.92507282797682)
+            val parada19_20Nov = MarkerOptions().position(nov19).title("Parada cerca de Offix")
+            map.addMarker(parada19_20Nov)
+
+            /*
+            //
+            val nov = LatLng()
+            val parada_20Nov = MarkerOptions().position(nov).title("")
+            map.addMarker(parada_20Nov)
+             */
+            //-------------------------Lázaro Cardenas---------------------------\\
+
 
         }
 
