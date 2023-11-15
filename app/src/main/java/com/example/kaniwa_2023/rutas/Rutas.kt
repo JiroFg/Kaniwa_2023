@@ -9,6 +9,7 @@ import com.google.android.gms.maps.model.Dash
 import com.google.android.gms.maps.model.Dot
 import com.google.android.gms.maps.model.Gap
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.maps.model.PolylineOptions
 import com.google.android.gms.maps.model.RoundCap
 
@@ -753,5 +754,427 @@ class Rutas (){
                 ).show()
             }
         }*/
+        fun paradasConocidas(map: GoogleMap, context: Context){
+            //Parada Fei
+            val c0 = LatLng(19.542635, -96.927233)
+            val economia = MarkerOptions().position(c0).title("Economía")
+            map.addMarker(economia)
+            //Agua Santa 1
+            val c1 = LatLng(19.529693, -96.900883)
+            val aguaSanta1 = MarkerOptions().position(c1).title("Agua Santa 1")
+            map.addMarker(aguaSanta1)
+            //map.addMarker(MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.mipmap.
+            // ic_paradas1)).anchor(0.0f,1.0f).position(coordenadas).title("Agua Santa 1"))
+
+            //Agua Santa 2
+            val c2 = LatLng(19.529690, -96.900371)
+            val aguaSanta2 = MarkerOptions().position(c2).title("Agua Santa 2")
+            map.addMarker(aguaSanta2)
+
+            //Doña Falla
+            val c3 = LatLng(19.522595, -96.894830)
+            val dFalla = MarkerOptions().position(c3).title("Parque de doña Falla")
+            map.addMarker(dFalla)
+
+            //BIENESTAR
+            val c3_2 = LatLng(19.522595, -96.894830)
+            val sBienestar = MarkerOptions().position(c3_2).title("Secretaria Bienestar")
+            map.addMarker(sBienestar)
+
+            //Parque natura
+            val c4 = LatLng(19.518945, -96.883305)
+            val pNatura = MarkerOptions().position(c4).title("Parque Natura")
+            map.addMarker(pNatura)
+
+            //Plaza americas
+            val c5 = LatLng(19.513259188258463, -96.8756648576462)
+            val plazaAmericas = MarkerOptions().position(c5).title("Plaza Americas")
+            map.addMarker(plazaAmericas)
+
+            //Parada frente a plaza americas
+            val c6 = LatLng(19.513174, -96.875285)
+            val plazaAmericas2 = MarkerOptions().position(c6).title("Plaza americas")
+            map.addMarker(plazaAmericas2)
+
+            //Plaza Animas
+            val c7 = LatLng(19.518794276525053, -96.88282015160287)
+            val  plazaAnimas= MarkerOptions().position(c7).title("Plaza Animas")
+            map.addMarker(plazaAnimas)
+
+            //Parada CorpusGym
+            val c8 = LatLng(19.532288, -96.905237)
+            val corpusGym = MarkerOptions().position(c8).title("CorpusGym")
+            map.addMarker(corpusGym)
+
+            //Pomona
+            val c9 = LatLng(19.531994, -96.905337)
+            val pomona = MarkerOptions().position(c9).title("Pomona")
+            map.addMarker(pomona)
+
+        }
+
+        fun ruta1(map: GoogleMap, context: Context){
+            //Antojitos Vero
+
+            val c0 = LatLng(19.542635, -96.927233)
+            val cc0 = map.addMarker(
+                MarkerOptions()
+                    .position(c0)
+                    .title("Ruta 1: Parada-01")
+                //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_paradas))
+            )
+
+            //map.addMarker(cc0)
+
+            // Av. Manuel Ávila Camacho 290, Zona Centro, Centro, 91000 Xalapa-Enríquez, Ver., México
+            val c8 = LatLng(19.539844, -96.926898)
+            val cc8= MarkerOptions()
+                .position(c8)
+                .title("Ruta 1 : Parada-02")
+            map.addMarker(cc8)
+
+            // Av. Manuel Ávila Camacho 244A, Zona Centro, Centro, 91000 Xalapa-Enríquez, Ver., México
+            val c9 = LatLng(19.538384, -96.928626)
+            val cc9= MarkerOptions()
+                .position(c9)
+                .title("Ruta 1: Parada-03")
+            map.addMarker(cc9)
+
+            //C. Coatepec n2, Veracruz, 91020 Xalapa-Enríquez, Ver., México
+            val c10 = LatLng(19.537598, -96.929504)
+            val cc10= MarkerOptions()
+                .position(c10)
+                .title("Ruta 1 : Parada-04")
+            map.addMarker(cc10)
+
+            //Av. Manuel Ávila Camacho 188, Zona Centro, Centro, 91000 Xalapa-Enríquez, Ver., México
+            val c11 = LatLng(19.536053, -96.931345)
+            val cc11= MarkerOptions()
+                .position(c11)
+                .title("Ruta 1 : Parada-05")
+            map.addMarker(cc11)
+
+            //Av. Manuel Ávila Camacho 159, Francisco Ferrer Guardia, 91026 Xalapa-Enríquez, Ver., México
+            val c12 = LatLng(19.534837, -96.932690)
+            val cc12= MarkerOptions()
+                .position(c12)
+                .title("Ruta 1 : Parada-06")
+            map.addMarker(cc12)
+
+            // C. Ignacio de la Llave 16 Altos, Represa del Carmen, 91050 Xalapa-Enríquez, Ver., México
+            val c13 = LatLng(19.532100, -96.934069)
+            val cc13= MarkerOptions()
+                .position(c13)
+                .title("Ruta 1 : Parada-07")
+            map.addMarker(cc13)
+
+            //C. Ignacio de la Llave 45, Represa del Carmen, 91050 Xalapa-Enríquez, Ver., México
+            val c14 = LatLng(19.529710, -96.934683)
+            val cc14= MarkerOptions()
+                .position(c14)
+                .title("Ruta 1 : Parada-08")
+            map.addMarker(cc14)
+
+            //José Cardel 105, Benito Juárez, 91070 Xalapa-Enríquez, Ver., México
+            val c15 = LatLng(19.526119, -96.934323)
+            val cc15= MarkerOptions()
+                .position(c15)
+                .title("Ruta 1 : Parada-09")
+            map.addMarker(cc15)
+
+            //Mora Beristain 2, Zona Centro, Allanburg, 12242 Xalapa-Enríquez, Ver., México
+            val c16 = LatLng(19.525303, -96.933597)
+            val cc16= MarkerOptions()
+                .position(c16)
+                .title("Ruta 1 : Parada-10")
+            map.addMarker(cc16)
+
+            //Av Venustiano Carranza 23, Francisco I. Madero, 91070 Xalapa-Enríquez, Ver., México
+            val c17 = LatLng(19.523578419666222, -96.93122363142665)
+            val cc17= MarkerOptions()
+                .position(c17)
+                .title("Ruta 1 : Parada-11")
+            map.addMarker(cc17)
+
+            //Av Venustiano Carranza 66, Francisco I. Madero, 91070 Xalapa-Enríquez, Ver., México
+            val c18 = LatLng(19.526119, -96.934323)
+            val cc18= MarkerOptions()
+                .position(c18)
+                .title("Ruta 1 : Parada-12")
+            map.addMarker(cc18)
+
+            //91080, Av Venustiano Carranza 93, Venustiano Carranza, 91070 Xalapa-Enríquez, Ver., México
+            val c19 = LatLng(19.522152780716706, -96.92815555684797)
+            val cc19= MarkerOptions()
+                .position(c19)
+                .title("Ruta 1 : Parada-13")
+            map.addMarker(cc19)
+
+            //Av Venustiano Carranza 124, Felipe Carrillo Puerto, 91080 Xalapa-Enríquez, Ver.
+            val c20 = LatLng(19.521552286456302, -96.92687548095408)
+            val cc20= MarkerOptions()
+                .position(c20)
+                .title("Ruta 1 : Parada-14")
+            map.addMarker(cc20)
+
+            //Av Venustiano Carranza 144, Felipe Carrillo Puerto, 91080 Xalapa-Enríquez, Ver., México
+            val c21 = LatLng(19.521468, -96.926276)
+            val cc21= MarkerOptions()
+                .position(c21)
+                .title("Ruta 1 : Parada-15")
+            map.addMarker(cc21)
+
+            //Av Venustiano Carranza 168, Felipe Carrillo Puerto, 91080 Xalapa-Enríquez, Ver., México
+            val c22 = LatLng(19.523007423710673, -96.92546385898572)
+            val cc22= MarkerOptions()
+                .position(c22)
+                .title("Ruta 1 : Parada-16")
+            map.addMarker(cc22)
+
+            //Av Venustiano Carranza 269A, Felipe Carrillo Puerto, 91080 Xalapa-Enríquez, Ver., México
+            val c23 = LatLng(19.52013786649953, -96.9233289435346)
+            val cc23= MarkerOptions()
+                .position(c23)
+                .title("Ruta 1 : Parada-17")
+            map.addMarker(cc23)
+
+            //Av Venustiano Carranza 299, Felipe Carrillo Puerto, 91080 Xalapa-Enríquez, Ver., México
+            val c24 = LatLng(19.518963686109146, -96.92250116705212)
+            val cc24= MarkerOptions()
+                .position(c24)
+                .title("Ruta 1 : Parada-18")
+            map.addMarker(cc24)
+
+            //Universitario Gonzalo Aguirre Beltrán, Zona Universitaria, 91090 Xalapa-Enríquez, Ver., México
+            val c25 = LatLng(19.518300001172367, -96.919902039671)
+            val cc25= MarkerOptions()
+                .position(c25)
+                .title("Ruta 1 : Parada-19")
+            map.addMarker(cc25)
+
+            //Pergola 8, Lomas del Estadio, 91090 Xalapa-Enríquez, Ver., México
+            val c26 = LatLng(19.519127905211196, -96.91809034643435)
+            val cc26= MarkerOptions()
+                .position(c26)
+                .title("Ruta 1 : Parada-20")
+            map.addMarker(cc26)
+
+            //C. Salvador Díaz Mirón 37, Zona Centro, Lomas del Estadio, 91000 Xalapa-Enríquez, Ver., México
+            val c27 = LatLng(19.521012160288073, -96.91819139204021)
+            val cc27= MarkerOptions()
+                .position(c27)
+                .title("Ruta 1 : Parada-21")
+            map.addMarker(cc27)
+
+            //Enrique C Rébsamen 69, Centro, 91000 Xalapa-Enríquez, Ver., México
+            val c28 = LatLng(19.521476109074012, -96.91626201002641)
+            val cc28= MarkerOptions()
+                .position(c28)
+                .title("Ruta 1 : Parada-22")
+            map.addMarker(cc28)
+
+            //Av. Enrique C. Rébsamen 140, Bella Vista, 91090 Xalapa-Enríquez, Ver., México
+            val c29 = LatLng(19.517391018443167, -96.91308574102696)
+            val cc29= MarkerOptions()
+                .position(c29)
+                .title("Ruta 1 : Parada-23")
+            map.addMarker(cc29)
+
+            //Av. Enrique C. Rébsamen, Martires de Chicago, 91094 Xalapa-Enríquez, Ver., México
+            val c30 = LatLng(19.515383200788044, -96.91108681973272)
+            val cc30= MarkerOptions()
+                .position(c30)
+                .title("Ruta 1 : Parada-24")
+            map.addMarker(cc30)
+
+            //Av. Enrique C. Rébsamen, Martires de Chicago, 91090 Xalapa-Enríquez, Ver., México
+            val c31 = LatLng(19.514113338028054, -96.90938359925401)
+            val cc31= MarkerOptions()
+                .position(c31)
+                .title("Ruta 1 : Parada-25")
+            map.addMarker(cc31)
+
+            //Av. Enrique C. Rébsamen 272, Martires de Chicago, 91090 Xalapa-Enríquez, Ver., México
+            val c32 = LatLng(19.512751863725498, -96.9070187816892)
+            val cc32= MarkerOptions()
+                .position(c32)
+                .title("Ruta 1 : Parada-26")
+            map.addMarker(cc32)
+
+            //Observatorio metereologico de xalapa, Xalapa 2000, 91097 Xalapa-Enríquez, Ver.
+            val c33 = LatLng(19.512524370965586, -96.90404925525434)
+            val cc33= MarkerOptions()
+                .position(c33)
+                .title("Ruta 1 : Parada-27")
+            map.addMarker(cc33)
+
+            //Miscelanea "Micro 2000", Manantial de San Cristóbal, Xalapa 2000, 91097 Xalapa-Enríquez, Ver.
+            val c34 = LatLng(19.511960449227736, -96.90146353716793)
+            val cc34= MarkerOptions()
+                .position(c34)
+                .title("Ruta 1 : Parada-28")
+            map.addMarker(cc34)
+
+            //Parque Xalapa 2000
+            val c35 = LatLng(19.50874817012107, -96.90033364689575)
+            val cc35= MarkerOptions()
+                .position(c35)
+                .title("Ruta 1 : Parada-29")
+            map.addMarker(cc35)
+
+            //Centro de Verificación C-XL32
+            val c36 = LatLng(19.507941051368448, -96.90115439530913)
+            val cc36= MarkerOptions()
+                .position(c36)
+                .title("Ruta 1 : Parada-30")
+            map.addMarker(cc36)
+
+            //Instituto Mexicano de Contadores Públicos…
+            val c37 = LatLng(19.50556766853243, -96.89623020463095)
+            val cc37= MarkerOptions()
+                .position(c37)
+                .title("Ruta 1 : Parada-31")
+            map.addMarker(cc37)
+
+            //Estatua A Yanga
+            val c38 = LatLng(19.50518701380518, -96.89346446960897)
+            val cc38= MarkerOptions()
+                .position(c38)
+                .title("Ruta 1 : Parada-32")
+            map.addMarker(cc38)
+
+            //Arco Sur 140, Lomas Verdes, 91098 Lomas Verdes, Ver.
+            val c39 = LatLng(19.505487367630394, -96.89169141158781)
+            val cc39= MarkerOptions()
+                .position(c39)
+                .title("Ruta 1 : Parada-33")
+            map.addMarker(cc39)
+
+            //OXXO Lomas Verdes
+            val c40 = LatLng(19.504694614601387, -96.89062574324079)
+            val cc40= MarkerOptions()
+                .position(c40)
+                .title("Ruta 1 : Parada-34")
+            map.addMarker(cc40)
+
+            //Gusto Culposo
+            val c41 = LatLng(19.505892132924068, -96.8895160101093)
+            val cc41= MarkerOptions()
+                .position(c41)
+                .title("Ruta 1 : Parada-35")
+            map.addMarker(cc41)
+
+            //Lomas Verdes, 91098 Lomas Verdes, Ver.
+            val c42 = LatLng(19.506391287626922, -96.8868425809209)
+            val cc42= MarkerOptions()
+                .position(c42)
+                .title("Ruta 1 : Parada-36")
+            map.addMarker(cc42)
+
+            //Frankfurt Food Truck
+            val c43 = LatLng(19.507299629788744, -96.88173050553556)
+            val cc43= MarkerOptions()
+                .position(c43)
+                .title("Ruta 1 : Parada-37")
+            map.addMarker(cc43)
+
+            //Arco Sur, Pastoresa, 91223 Pacho Viejo, Ver.
+            val c44 = LatLng(19.50684038458372, -96.87661133725486)
+            val cc44= MarkerOptions()
+                .position(c44)
+                .title("Ruta 1 : Parada-38")
+            map.addMarker(cc44)
+
+            //Santa Lucía 1, Xalapa, Reserva Territorial, Col Santa Bárbara, Ver.
+            val c45 = LatLng(19.508508642854167, -96.87280168036887)
+            val cc45= MarkerOptions()
+                .position(c45)
+                .title("Ruta 1 : Parada-39")
+            map.addMarker(cc45)
+
+            //VerifiCentro - El Olmo
+            val c46 = LatLng(19.50741171849216, -96.86938588540266)
+            val cc46= MarkerOptions()
+                .position(c46)
+                .title("Ruta 1 : Parada-40")
+            map.addMarker(cc46)
+
+            //La Naolinqueña
+            val c47 = LatLng(19.506817900718687, -96.86662901755243)
+            val cc47= MarkerOptions()
+                .position(c47)
+                .title("Ruta 1 : Parada-41")
+            map.addMarker(cc47)
+
+            //La Toga Pastelería Fina, Carretera Trancas-Coatepec KM 0.2 #122, Emiliano Zapata, 91637 Las Trancas, Ver.
+            val c48 = LatLng(19.505157684649337, -96.86263659781252)
+            val cc48= MarkerOptions()
+                .position(c48)
+                .title("Ruta 1 : Parada-42")
+            map.addMarker(cc48)
+
+            //Refaccionaria Kimura suc. Trancas, Carr. Coatepec - Las Trancas km. 600-Local 6, Fracc. La Cienega, 91637 Ver.
+            val c49 = LatLng(19.50122345611109, -96.86077289608028)
+            val cc49= MarkerOptions()
+                .position(c49)
+                .title("Ruta 1 : Parada-43")
+            map.addMarker(cc49)
+
+            //Caoba, Xalitic, 91637 Pacho Viejo, Ver.
+            val c50 = LatLng(19.49835525234024, -96.85643338485156)
+            val cc50= MarkerOptions()
+                .position(c50)
+                .title("Ruta 1 : Parada-44")
+            map.addMarker(cc50)
+
+            //Centro Deportivo Bugambilias, C. Diamante 263, 91637 Jacarandas, Ver.
+            val c51 = LatLng(19.494644, -96.851495)
+            val cc51= MarkerOptions()
+                .position(c51)
+                .title("Ruta 1 : Parada-45")
+            map.addMarker(cc51)
+
+            //C. Aguamarina 2b, 91637 Jacarandas, Ver., México
+            val c52 = LatLng(19.495252, -96.850424)
+            val cc52= MarkerOptions()
+                .position(c52)
+                .title("Ruta 1 : Parada-46")
+            map.addMarker(cc52)
+
+            //And. Zafiro 2b, Las Trancas, 91637 Pacho Viejo, Ver., México
+            val c53 = LatLng(19.495774, -96.851433)
+            val cc53= MarkerOptions()
+                .position(c53)
+                .title("Ruta 1 : Parada-47")
+            map.addMarker(cc53)
+
+            //C. Hacienda Claudina 3, 91637 Jacarandas, Ver., México
+            val c54 = LatLng(19.496602, -96.852159)
+            val cc54= MarkerOptions()
+                .position(c54)
+                .title("Ruta 1 : Parada-48")
+            map.addMarker(cc54)
+
+            //Fracc. Dalias Prolong. Bugambilias 2, 91637 Xalapa-Enríquez, Ver., México
+            val c55 = LatLng(19.500343, -96.860193)
+            val cc55= MarkerOptions()
+                .position(c55)
+                .title("Ruta 1 : Parada-49")
+            map.addMarker(cc55)
+
+            //Dr. Rafael Lucio 38, 91637 Las Trancas, Ver., México
+            val c56 = LatLng(19.505906, -96.863399)
+            val cc56= MarkerOptions()
+                .position(c56)
+                .title("Ruta 1 : Parada-50")
+            map.addMarker(cc56)
+
+            // Las Trancas 35, Santa Anita, 91190 Xalapa-Enríquez, Ver., México
+            val c57 = LatLng(19.506810, -96.865633)
+            val cc57= MarkerOptions()
+                .position(c57)
+                .title("Ruta 1 : Parada-51")
+            map.addMarker(cc57)
+        }
     }
 }

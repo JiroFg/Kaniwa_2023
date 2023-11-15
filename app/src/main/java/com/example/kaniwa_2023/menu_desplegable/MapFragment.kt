@@ -53,6 +53,10 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback {
         Rutas.AMARILLO3(map,requireContext())
         Rutas.AMARILLO4(map,requireContext())
         Rutas.SUX(map,requireContext())
+
+        //Paradas de rutas
+        Rutas.paradasConocidas(map,requireContext())
+        Rutas.ruta1(map,requireContext())
     }
 
     //Metodo para hacer zoom en una coordenada especifica
