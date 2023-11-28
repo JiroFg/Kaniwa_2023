@@ -31,7 +31,7 @@ import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
 import com.google.android.material.navigation.NavigationView
 
-class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, IDialogoRutas {
 
     private lateinit var binding: ActivityHomeBinding
     private lateinit var drawerLayout: DrawerLayout
@@ -141,5 +141,16 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    override fun pintarRuta(ruta: String) {
+        mapFrag.limpiarMapa()
+        mapFrag.pintarParadas()
+        when(ruta){
+            "Amarillo" -> mapFrag.pintarRutaAmarillo()
+            "Verde" -> mapFrag.pintarRutaVerde()
+            "Sux" -> mapFrag.pintarRutaSux()
+            "Ataz" -> mapFrag.pintarAtaz()
+        }
     }
 }

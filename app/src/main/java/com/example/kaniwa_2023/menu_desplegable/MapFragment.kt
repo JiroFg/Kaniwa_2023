@@ -45,18 +45,35 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback {
         this.map = map
         enabledLocation()
         setCityLocation()
+        pintarParadas()
+    }
 
-        //Se pintan rutas temporalmente
+    fun pintarParadas(){
+        Rutas.paradasConocidas(map, activity)
+        //Rutas.paradasRuta1(map,requireContext(),activity)
+    }
+
+    fun limpiarMapa(){
+        map.clear()
+    }
+
+    fun pintarRutaSux(){
+        Rutas.SUX(map,requireContext())
+    }
+
+    fun pintarRutaVerde(){
         Rutas.VERDE(map,requireContext())
+    }
+
+    fun pintarRutaAmarillo(){
         Rutas.AMARILLO(map, requireContext())
         Rutas.AMARILLO2(map,requireContext())
         Rutas.AMARILLO3(map,requireContext())
         Rutas.AMARILLO4(map,requireContext())
-        Rutas.SUX(map,requireContext())
+    }
 
-        //Paradas de rutas
-        Rutas.paradasConocidas(map,requireContext())
-        Rutas.ruta1(map,requireContext())
+    fun pintarAtaz(){
+        Rutas.ATAZ(map, requireContext())
     }
 
     //Metodo para hacer zoom en una coordenada especifica

@@ -1,10 +1,19 @@
 package com.example.kaniwa_2023.rutas
 
 import android.content.Context
+import android.content.Context.LAYOUT_INFLATER_SERVICE
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentActivity
+import com.example.kaniwa_2023.IDialogoRutas
 import com.example.kaniwa_2023.R
 import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.Dash
 import com.google.android.gms.maps.model.Dot
 import com.google.android.gms.maps.model.Gap
@@ -12,6 +21,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.maps.model.PolylineOptions
 import com.google.android.gms.maps.model.RoundCap
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class Rutas (){
     companion object {
@@ -754,46 +764,84 @@ class Rutas (){
                 ).show()
             }
         }*/
-        fun paradasConocidas(map: GoogleMap, context: Context){
+
+        private fun vistaABitmap(view: View): Bitmap?{
+            view.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED)
+            val bitmap = Bitmap.createBitmap(view.measuredWidth, view.measuredHeight, Bitmap.Config.ARGB_8888)
+            val canvas = Canvas(bitmap)
+            view.layout(0,0,view.measuredWidth, view.measuredHeight)
+            view.draw(canvas)
+            return bitmap
+        }
+
+        fun dialogoRutas(fragmentActivity: FragmentActivity?){
+            var index = 0
+            val listaRutas = arrayOf("Amarillo", "Verde", "Sux", "Ataz")
+            var selectItem = listaRutas[index]
+            val dialogoRutasInterface: IDialogoRutas = fragmentActivity as IDialogoRutas
+
+            MaterialAlertDialogBuilder(fragmentActivity)
+                .setTitle("Rutas")
+                .setSingleChoiceItems(listaRutas, index){dialog, which ->
+                    index = which
+                    selectItem = listaRutas[which]
+                }
+                .setPositiveButton("Aceptar"){ dialog, which ->
+                    dialogoRutasInterface.pintarRuta(selectItem)
+                }
+                .show()
+        }
+
+        fun paradasConocidas(map: GoogleMap, fragmentActivity: FragmentActivity?){
+            val markerView = (fragmentActivity!!.getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater).inflate(R.layout.marker_layout, null)
+            val cardView = markerView.findViewById<CardView>(R.id.cv_marker)
+            val bitmap = Bitmap.createScaledBitmap(vistaABitmap(cardView)!!, cardView.width, cardView.height, false)
+            val smallMarkerIcon = BitmapDescriptorFactory.fromBitmap(bitmap)
+
+
+            map.setOnMarkerClickListener{ marker ->
+                dialogoRutas(fragmentActivity)
+                false
+            }
+
             //Parada Fei
             val c0 = LatLng(19.542635, -96.927233)
-            val economia = MarkerOptions().position(c0).title("Economía")
+            val economia = MarkerOptions().position(c0).icon(smallMarkerIcon).title("Economía")
             map.addMarker(economia)
+
             //Agua Santa 1
             val c1 = LatLng(19.529693, -96.900883)
-            val aguaSanta1 = MarkerOptions().position(c1).title("Agua Santa 1")
+            val aguaSanta1 = MarkerOptions().position(c1).icon(smallMarkerIcon).title("Agua Santa 1")
             map.addMarker(aguaSanta1)
-            //map.addMarker(MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.mipmap.
-            // ic_paradas1)).anchor(0.0f,1.0f).position(coordenadas).title("Agua Santa 1"))
 
             //Agua Santa 2
             val c2 = LatLng(19.529690, -96.900371)
-            val aguaSanta2 = MarkerOptions().position(c2).title("Agua Santa 2")
+            val aguaSanta2 = MarkerOptions().position(c2).icon(smallMarkerIcon).title("Agua Santa 2")
             map.addMarker(aguaSanta2)
 
             //Doña Falla
             val c3 = LatLng(19.522595, -96.894830)
-            val dFalla = MarkerOptions().position(c3).title("Parque de doña Falla")
+            val dFalla = MarkerOptions().position(c3).icon(smallMarkerIcon).title("Parque de doña Falla")
             map.addMarker(dFalla)
 
             //BIENESTAR
             val c3_2 = LatLng(19.52287569326267, -96.89480001393063)
-            val sBienestar = MarkerOptions().position(c3_2).title("Secretaria Bienestar")
+            val sBienestar = MarkerOptions().position(c3_2).icon(smallMarkerIcon).title("Secretaria Bienestar")
             map.addMarker(sBienestar)
 
             //Parque natura
             val c4 = LatLng(19.518945, -96.883305)
-            val pNatura = MarkerOptions().position(c4).title("Parque Natura")
+            val pNatura = MarkerOptions().position(c4).icon(smallMarkerIcon).title("Parque Natura")
             map.addMarker(pNatura)
 
             //Plaza americas
             val c5 = LatLng(19.513259188258463, -96.8756648576462)
-            val plazaAmericas = MarkerOptions().position(c5).title("Plaza Americas")
+            val plazaAmericas = MarkerOptions().icon(smallMarkerIcon).position(c5).title("Plaza Americas")
             map.addMarker(plazaAmericas)
 
             //HOtel ONE
             val c5_2 = LatLng(19.51548568713009, -96.87935919848536)
-            val hotelOne= MarkerOptions().position(c5_2).title("Hotel One")
+            val hotelOne= MarkerOptions().icon(smallMarkerIcon).position(c5_2).title("Hotel One")
             map.addMarker(hotelOne)
 
             //Nissan en frente del hotel One
@@ -916,19 +964,9 @@ class Rutas (){
             val nov19 = LatLng(19.539362600545648, -96.92507282797682)
             val parada19_20Nov = MarkerOptions().position(nov19).title("Parada cerca de Offix")
             map.addMarker(parada19_20Nov)
-
-            /*
-            //
-            val nov = LatLng()
-            val parada_20Nov = MarkerOptions().position(nov).title("")
-            map.addMarker(parada_20Nov)
-             */
-            //-------------------------Lázaro Cardenas---------------------------\\
-
-
         }
 
-        fun ruta1(map: GoogleMap, context: Context){
+        fun paradasRuta1(map: GoogleMap, context: Context){
             //Antojitos Vero
 
             val c0 = LatLng(19.542635, -96.927233)
