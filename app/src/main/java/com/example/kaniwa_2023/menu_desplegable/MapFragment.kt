@@ -49,7 +49,7 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback {
     }
 
     fun pintarParadas(){
-        Rutas.paradasConocidas(map, activity)
+        Rutas.paradasAmarillo(map, activity)
         //Rutas.paradasRuta1(map,requireContext(),activity)
     }
 
