@@ -3,5 +3,10 @@
     <style name="Base.Theme.Kaniwa_2023" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_color</item>
+        <item name="android:statusBarColor">@color/primary_color</item>
+        <item name="colorAccent">@color/primary_color</item>
     </style>
+    <style name="Theme.Kaniwa_2023" parent="Base.Theme.Kaniwa_2023" />
 </resources>

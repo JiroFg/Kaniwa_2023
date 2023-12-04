@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".menu_desplegable.CostFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -49,7 +50,7 @@
         <TextView
             android:id="@+id/estudiantesPrecio"
             android:layout_width="112dp"
-            android:layout_height="47dp"
+            android:layout_height="68dp"
             android:gravity="center"
             android:text="$6.00"
             android:textColor="#EA8405"
@@ -64,7 +65,7 @@
         <TextView
             android:id="@+id/generalPrecio"
             android:layout_width="112dp"
-            android:layout_height="47dp"
+            android:layout_height="68dp"
             android:gravity="center"
             android:text="$9.00"
             android:textColor="#EA8405"
@@ -78,8 +79,8 @@
 
         <TextView
             android:id="@+id/inapamPrecio"
-            android:layout_width="112dp"
-            android:layout_height="47dp"
+            android:layout_width="114dp"
+            android:layout_height="68dp"
             android:gravity="center"
             android:text="$6.00"
             android:textColor="#EA8405"

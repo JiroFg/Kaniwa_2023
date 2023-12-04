@@ -39,10 +39,13 @@
                 android:layout_marginStart="100dp"
                 android:layout_marginEnd="60dp"
                 app:cardCornerRadius="100dp">
-                <androidx.fragment.app.FragmentContainerView android:id="@+id/autocomplete_fragment"
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/autocomplete_fragment"
+                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
                     android:layout_width="290dp"
                     android:layout_height="38dp"
-                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment" />
+                    android:background="#FFFFFF" />
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -58,8 +61,10 @@
         android:layout_width="280dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="#FFFFFF"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/nav_menu"
-        app:itemIconTint="@color/primary_color"/>
+        app:itemIconTint="@color/primary_color"
+        app:itemTextColor="#000000"
+        app:menu="@menu/nav_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

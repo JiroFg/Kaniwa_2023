@@ -30,6 +30,7 @@
             android:elegantTextHeight="true"
             android:gravity="center"
             android:text="TextView"
+            android:textColor="#FFFFFF"
             android:textSize="30sp" />
 
         <TextView
@@ -49,10 +50,13 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/chat"
         android:layout_width="153dp"
         android:layout_height="70dp"
-        android:text="Button"
+        android:text="Contactar"
+        app:icon="@drawable/baseline_phone_24"
+        app:iconSize="25dp"
+        app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".menu_desplegable.InfoFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,11 +25,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Equipo de desarrollo"
+            android:textColor="#000000"
+            android:textSize="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.060000002" />
+            app:layout_constraintVertical_bias="0.01999998" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

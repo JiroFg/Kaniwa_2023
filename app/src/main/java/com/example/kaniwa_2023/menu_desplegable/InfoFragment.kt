@@ -18,11 +18,11 @@ class InfoFragment : Fragment() {
         val view= inflater.inflate(R.layout.fragment_info, container, false)
         viewPager = view.findViewById(R.id.ViewP)
         val carouselItems = listOf(
-            CarouselItem(R.drawable.alan, "Alan Armando Hernández Domínguez"),
-            CarouselItem(R.drawable.marcos, "Marcos Yahir De la caña Pérez"),
-            CarouselItem(R.drawable.erick, "Erick Adrián Hernández Aburto"),
-            CarouselItem(R.drawable.edson, "Edson Jair Fuentes García"),
-            CarouselItem(R.drawable.perrones, "Alex Antonio Terrones Pacheco"),
+            CarouselItem(R.drawable.alan, "Alan Armando Hernández Domínguez", "9242417055"),
+            CarouselItem(R.drawable.marcos, "Marcos Yahir De la caña Pérez", "2791164035"),
+            CarouselItem(R.drawable.erick, "Erick Adrián Hernández Aburto", "2281405346"),
+            CarouselItem(R.drawable.edson, "Edson Jair Fuentes García","2283368916"),
+            CarouselItem(R.drawable.perrones, "Alex Antonio Terrones Pacheco","2284001034"),
             // Agrega más elementos aquí
         )
         val adapter = CarouselAdapter(carouselItems)

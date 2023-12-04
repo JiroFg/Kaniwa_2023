@@ -21,7 +21,7 @@ class HelpFragment : Fragment() {
         val view= inflater.inflate(R.layout.fragment_help, container, false)
 
         // Se Obtiene una referencia al TextView
-        val emailTextView: TextView = view.findViewById(R.id.correo)
+        //val emailTextView: TextView = view.findViewById(R.id.)
         val emailButton : Button = view.findViewById(R.id.emailButton)
         val recipientEmail = "alanarmando997@gmail.com"
         val subject = "Ayuda referente a Kaniwá"
